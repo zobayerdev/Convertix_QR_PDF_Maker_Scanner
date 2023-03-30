@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ScanGalleryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Barcode &amp; QR Code Scanner "
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <!--            <com.google.android.material.button.MaterialButton
+                            android:id="@+id/cameraBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/trebuc"
+                            android:text="Camera"
+                            android:textAllCaps="false" />-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/galleryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/trebuc"
+                android:text="Gallery"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/nav_scan" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/scanBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/trebuc"
+            android:text="Scan now"
+            android:textAllCaps="false" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/trebuc"
+            android:text="Result: " />
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/trebuc"
+            android:text="Result"
+            android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/copyBtn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_copy"
+            android:background="@color/zxing_transparent"
+            />
+
+        <ImageButton
+            android:id="@+id/shareBtn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_share"
+            android:background="@color/zxing_transparent"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

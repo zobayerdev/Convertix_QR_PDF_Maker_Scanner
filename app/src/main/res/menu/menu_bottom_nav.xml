@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:fontFamily="@font/tinos_bold"
+        />
+    <item
+        android:id="@+id/bottom_menu_image"
+        android:title="Images"
+        android:icon="@drawable/ic_image_black"
+        android:fontFamily="@font/tinos_bold"
+        />
+
+    <item
+        android:id="@+id/bottom_menu_pdf"
+        android:icon="@drawable/ic_pdf_black"
+        android:title="PDFs"
+        android:fontFamily="@font/tinos_bold"
+        />
+
+</menu>

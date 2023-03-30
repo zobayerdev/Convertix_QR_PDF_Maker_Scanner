@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rename PDF"
+        android:textAlignment="center"
+        android:fontFamily="@font/trebuc"
+        />
+
+    <EditText
+        android:id="@+id/pdfNewNameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PDF Name"
+        android:inputType="textPersonName"
+        android:fontFamily="@font/trebuc"
+        />
+
+    <Button
+        android:id="@+id/renameBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rename PDF"
+        android:fontFamily="@font/trebuc"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+</LinearLayout>

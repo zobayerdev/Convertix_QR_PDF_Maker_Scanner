@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Notification"
+        android:id="@+id/nav_notification_notice"
+        android:icon="@drawable/ic_notification"
+        />
+    <item
+        android:title="Developer"
+        android:id="@+id/nav_dev"
+        android:icon="@drawable/ic_person"/>
+
+    <item
+        android:title="Privacy Policy"
+        android:id="@+id/nav_policy"
+        android:icon="@drawable/ic_privacy"/>
+    <item
+        android:title="Share"
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share"/>
+    <item
+        android:title="Rate us"
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/ic_rate"/>
+
+</menu>

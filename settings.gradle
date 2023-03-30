@@ -3,6 +3,8 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        jcenter()
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +12,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        jcenter()
     }
 }
 rootProject.name = "Convertix"

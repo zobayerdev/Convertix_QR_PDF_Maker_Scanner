@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/ic_image_black" />
+            android:src="@drawable/gallery_qr" />
 
         <CheckBox
             android:id="@+id/checkBox"

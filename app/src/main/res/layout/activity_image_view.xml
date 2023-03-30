@@ -12,6 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:adjustViewBounds="true"
-        android:src="@drawable/ic_image_black" />
+        android:src="@drawable/gallery_qr" />
 
 </RelativeLayout>

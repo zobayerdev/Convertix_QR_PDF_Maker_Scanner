@@ -7,9 +7,10 @@
    <ImageView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/tuna_scanner"
+        android:src="@drawable/qr_gallery"
         android:contentDescription="@string/app_name"
        android:layout_gravity="center"
+       android:layout_margin="15dp"
        />
 
 </LinearLayout>

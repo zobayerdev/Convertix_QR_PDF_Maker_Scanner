@@ -4,13 +4,13 @@
 
     <item
         android:id="@+id/images_item_scan"
-        android:icon="@drawable/ic_scanner_white"
+        android:icon="@drawable/qr_gallery"
         android:title="Scan from camera"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/gallery_item_scan"
-        android:icon="@drawable/ic_gallery_scanner"
+        android:icon="@drawable/gallery_nav"
         android:title="Scan from gallery"
         app:showAsAction="always" />
 

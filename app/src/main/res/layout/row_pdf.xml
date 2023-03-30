@@ -19,7 +19,7 @@
             android:layout_width="65dp"
             android:layout_height="80dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/ic_pdf" />
+            android:src="@drawable/pdf_gallery" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -32,6 +32,7 @@
                 style="@style/TextAppearance.MaterialComponents.Subtitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:fontFamily="@font/sf_ns_bold"
                 android:text="PDF Name" />
 
@@ -43,6 +44,7 @@
                 android:layout_below="@id/nameTv"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="20dp"
+                android:layout_marginStart="5dp"
                 android:fontFamily="@font/trebuc"
                 android:text="0 Pages" />
 

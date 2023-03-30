@@ -49,8 +49,9 @@
             android:id="@+id/imageiv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/nav_scan" />
+            android:src="@drawable/qr_gallery" />
 
 
         <com.google.android.material.button.MaterialButton
@@ -68,14 +69,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="@font/trebuc"
-            android:text="Result: " />
+            android:fontFamily="@font/sf_ns_bold"
+            android:text="Scanning result show here:"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
 
         <TextView
             android:id="@+id/resultTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:fontFamily="@font/trebuc"
             android:text="Result"
             android:textColor="@color/black" />

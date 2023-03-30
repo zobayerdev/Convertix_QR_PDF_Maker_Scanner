@@ -26,7 +26,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:src="@drawable/tuna_scanner" />
+                android:src="@drawable/qr_gallery" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -58,10 +58,10 @@
                             android:layout_gravity="center"
                             android:orientation="vertical">
 
-                            <pl.droidsonroids.gif.GifImageView
+                            <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/qr_code" />
+                                android:src="@drawable/product" />
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
@@ -105,10 +105,10 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
 
-                                <pl.droidsonroids.gif.GifImageView
+                                <ImageView
                                     android:layout_width="35dp"
                                     android:layout_height="35dp"
-                                    android:src="@drawable/mail" />
+                                    android:src="@drawable/sms_qr" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -154,10 +154,10 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
 
-                                <pl.droidsonroids.gif.GifImageView
+                                <ImageView
                                     android:layout_width="35dp"
                                     android:layout_height="35dp"
-                                    android:src="@drawable/wifi" />
+                                    android:src="@drawable/wifi_qr" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -208,10 +208,10 @@
                             android:layout_gravity="center"
                             android:orientation="vertical">
 
-                            <pl.droidsonroids.gif.GifImageView
+                            <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/earth" />
+                                android:src="@drawable/url_qr" />
                         </LinearLayout>
 
                     </com.google.android.material.card.MaterialCardView>
@@ -255,10 +255,10 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
 
-                                <pl.droidsonroids.gif.GifImageView
+                                <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/qr_code" />
+                                    android:src="@drawable/contact_qr" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -307,7 +307,7 @@
                                 <pl.droidsonroids.gif.GifImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/bar" />
+                                    android:src="@drawable/barcode_qr" />
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
@@ -327,103 +327,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-
-            <!--Third layout on this activity-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-               <!-- <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/scanqrbar"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_margin="5dp"
-                        android:backgroundTint="#FFFFFF"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="5dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:orientation="vertical">
-
-                            <pl.droidsonroids.gif.GifImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/barcode" />
-                        </LinearLayout>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/sf_ns_bold"
-                        android:gravity="center"
-                        android:text="Scan now"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="13sp" />
-
-                </LinearLayout>-->
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/scangallery"
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_margin="5dp"
-                        android:backgroundTint="#FFFFFF"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="5dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:orientation="vertical">
-
-                            <pl.droidsonroids.gif.GifImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:src="@drawable/barcode" />
-                        </LinearLayout>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/sf_ns_bold"
-                        android:gravity="center"
-                        android:text="Scan from gallery"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="13sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!--TextView option in application-->
 
         </LinearLayout>
 

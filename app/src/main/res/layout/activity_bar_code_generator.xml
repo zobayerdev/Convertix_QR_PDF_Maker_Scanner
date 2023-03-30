@@ -78,7 +78,7 @@
             android:layout_height="130dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:src="@drawable/barccode" />
+            android:src="@drawable/barcode_qr" />
 
         <!--Button-->
         <com.google.android.material.button.MaterialButton

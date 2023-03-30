@@ -100,7 +100,7 @@
             android:layout_height="130dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:src="@drawable/ic_scanner" />
+            android:src="@drawable/product" />
 
 
         <!--Button-->

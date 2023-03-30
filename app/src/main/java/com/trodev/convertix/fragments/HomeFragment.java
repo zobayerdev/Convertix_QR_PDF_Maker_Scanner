@@ -28,7 +28,7 @@ import com.trodev.convertix.activities.URLActivity;
 import com.trodev.convertix.activities.WifiQRActivity;
 
 public class HomeFragment extends Fragment {
-    private CardView contact, product_qr, weburl, message, barcode, scanqrbar , scangallery, wifi;
+    private CardView contact, product_qr, weburl, message, barcode, scanqrbar, scangallery, wifi;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,8 +42,8 @@ public class HomeFragment extends Fragment {
         weburl = view.findViewById(R.id.weburl);
         message = view.findViewById(R.id.message);
         barcode = view.findViewById(R.id.barcode);
-       // scanqrbar = view.findViewById(R.id.scanqrbar);
-        scangallery = view.findViewById(R.id.scangallery);
+        // scanqrbar = view.findViewById(R.id.scanqrbar);
+        // scangallery = view.findViewById(R.id.scangallery);
         wifi = view.findViewById(R.id.wifi);
 
         wifi.setOnClickListener(new View.OnClickListener() {
@@ -94,22 +94,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-/*        scanqrbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ScannerActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
-        scangallery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ScanGalleryActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
         return view;
 
@@ -137,11 +121,10 @@ public class HomeFragment extends Fragment {
         int itemId = item.getItemId();
 
         if (itemId == R.id.images_item_scan) {
-            Intent intent = new Intent(getContext(), ScannerActivity.class );
+            Intent intent = new Intent(getContext(), ScannerActivity.class);
             startActivity(intent);
-        }
-        else if (itemId == R.id.gallery_item_scan) {
-            Intent intent = new Intent(getContext(), ScanGalleryActivity.class );
+        } else if (itemId == R.id.gallery_item_scan) {
+            Intent intent = new Intent(getContext(), ScanGalleryActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

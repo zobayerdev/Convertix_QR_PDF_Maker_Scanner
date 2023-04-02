@@ -8,7 +8,6 @@ Every user has use these features.
   - Wifi QR
   - URL QR
   - Contact QR
-  - Visiting Card QR
   - Location QR
   - E-mail QR
   - Profile QR
@@ -21,6 +20,8 @@ Every user has use these features.
 - Image to PDF Creator
 - Image to Text Scanner (Recognize text in images)
 - Language Translator
+- Text to Speech
+- Make Responsible Visiting Card
 - Share all type of Scanning Text & Files.
 
 Any one can use this application.

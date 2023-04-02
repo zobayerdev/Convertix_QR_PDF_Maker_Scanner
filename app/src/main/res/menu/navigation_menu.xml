@@ -2,26 +2,48 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Notification"
-        android:id="@+id/nav_notification_notice"
-        android:icon="@drawable/ic_notification"
-        />
-    <item
-        android:title="Developer"
-        android:id="@+id/nav_dev"
-        android:icon="@drawable/ic_person"/>
+        android:id="@+id/nav_pdf"
+        android:icon="@drawable/ic_nav_pdf"
+        android:title="Text to PDF" />
 
     <item
-        android:title="Privacy Policy"
+        android:id="@+id/nav_translator"
+        android:icon="@drawable/nav_translator"
+        android:title="Language Translator" />
+
+    <item
+        android:id="@+id/nav_speech"
+        android:icon="@drawable/speech"
+        android:title="Text To Speech" />
+
+    <item
+        android:id="@+id/nav_visiting_card"
+        android:icon="@drawable/visiting_card"
+        android:title="Create Visiting Card" />
+
+    <item
+        android:id="@+id/nav_dev"
+        android:icon="@drawable/ic_person"
+        android:title="Developer" />
+
+    <item
         android:id="@+id/nav_policy"
-        android:icon="@drawable/ic_privacy"/>
+        android:icon="@drawable/ic_privacy"
+        android:title="Privacy Policy" />
+
     <item
-        android:title="Share"
         android:id="@+id/nav_share"
-        android:icon="@drawable/ic_share"/>
+        android:icon="@drawable/ic_share"
+        android:title="Share" />
+
     <item
-        android:title="Rate us"
         android:id="@+id/nav_rate"
-        android:icon="@drawable/ic_rate"/>
+        android:icon="@drawable/ic_rate"
+        android:title="Rate us" />
+
+    <item
+        android:id="@+id/nav_apps"
+        android:icon="@drawable/ic_apps"
+        android:title="Our Apps" />
 
 </menu>

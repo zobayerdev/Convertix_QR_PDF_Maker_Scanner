@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Convertix</string>
-    <string name="select">Select Network Type</string>
-    <string name="select_encryption">Encryption</string>
+    <string name="select">Select Encryption Type</string>
+    <string name="select_encryption">Password Hidden</string>
     <string name="start">Open</string>
     <string name="close">Close</string>
 

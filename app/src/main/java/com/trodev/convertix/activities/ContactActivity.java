@@ -7,6 +7,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,7 +26,7 @@ public class ContactActivity extends AppCompatActivity {
     private ImageView imageView;
     public final static int QRCodeWidth = 500;
     Bitmap bitmap;
-    private Button download, Generate;
+    private ImageButton download, Generate;
 
 
     @SuppressLint("MissingInflatedId")

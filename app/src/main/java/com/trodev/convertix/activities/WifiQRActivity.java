@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -21,20 +22,17 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.trodev.convertix.R;
 
-
 public class WifiQRActivity extends AppCompatActivity {
 
-    String[] items = {"WPA", "WPA2", "WPA3"};
+    String[] items = {"WPA", "WPA2", "WPA3", "WEP", "None"};
     String[] item_two = {"Yes", "No"};
     AutoCompleteTextView ssid, encryption;
     ArrayAdapter<String> adapterItems;
 
     public final static int QRCodeWidth = 500;
     Bitmap bitmap;
-    private Button download, Generate;
-
+    private ImageButton download, Generate;
     private EditText networkname, password;
-
     private ImageView imageView;
 
     @SuppressLint("MissingInflatedId")
@@ -50,7 +48,7 @@ public class WifiQRActivity extends AppCompatActivity {
         ssid = findViewById(R.id.ssid_text);
         encryption = findViewById(R.id.encryption);
         networkname = findViewById(R.id.networkEt);
-        password  = findViewById(R.id.passeordEt);
+        password = findViewById(R.id.passeordEt);
 
         download = findViewById(R.id.downloadBtn);
         download.setVisibility(View.INVISIBLE);
@@ -92,12 +90,14 @@ public class WifiQRActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (ssid.getText().toString().length() + networkname.getText().toString().length() + password.getText().toString().length() + encryption.getText().toString().length()== 0) {
+                if (ssid.getText().toString().length() + networkname.getText().toString().length() + password.getText().toString().length() + encryption.getText().toString().length() == 0) {
                     Toast.makeText(WifiQRActivity.this, "Make sure your given Text..!", Toast.LENGTH_SHORT).show();
                 } else {
                     try {
-                        bitmap = textToImageEncode("ssid :  " + ssid.getText().toString().trim() + "\nNetwork Name :  " + networkname.getText().toString().trim() + "\nPassword:  " + password.getText().toString().trim()
-                                + "\nEncryption:  " + encryption.getText().toString().trim());
+                        bitmap = textToImageEncode("Encryption ssid :  " + ssid.getText().toString().trim()
+                                + "\nNetwork name :  " + networkname.getText().toString().trim()
+                                + "\nPassword:  " + password.getText().toString().trim()
+                                + "\nPassword hidden:  " + encryption.getText().toString().trim());
                         // + "\n\n\nMake by Altai Platforms"
                         imageView.setImageBitmap(bitmap);
                         download.setVisibility(View.VISIBLE);

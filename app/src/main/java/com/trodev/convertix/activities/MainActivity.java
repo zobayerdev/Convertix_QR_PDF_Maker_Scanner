@@ -175,8 +175,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         switch (item.getItemId()) {
-            case R.id.nav_notification_notice:
-                Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
+            case R.id.nav_pdf:
+                Toast.makeText(this, "Text to Pdf", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, TextToPdfActivity.class));
+                break;
+            case R.id.nav_translator:
+                Toast.makeText(this, "Language Translator", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, TranslatorActivity.class));
+                break;
+            case R.id.nav_speech:
+                Toast.makeText(this, "Text to Speech", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, TextToSpeechActivity.class));
+                break;
+            case R.id.nav_visiting_card:
+                Toast.makeText(this, "Make Responsive Visiting Card", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
+                // startActivity(new Intent(MainActivity.this, TextToSpeechActivity.class));
                 break;
             case R.id.nav_dev:
                 final Dialog dialog = new Dialog(this);
@@ -214,6 +228,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Rate us", Toast.LENGTH_SHORT).show();
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
+                }
+                break;
+            case R.id.nav_apps:
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
+                    Toast.makeText(this, "Our Apps", Toast.LENGTH_SHORT).show();
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
                 }
                 break;
         }

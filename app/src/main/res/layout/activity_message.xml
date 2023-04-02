@@ -64,44 +64,45 @@
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!--Button-->
+            <ImageButton
+                android:id="@+id/downloadBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/round_button"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_download_white" />
+            <!--Button-->
+            <ImageButton
+                android:id="@+id/Generate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/round_button"
+                android:src="@drawable/ic_create_white" />
 
         </LinearLayout>
 
-        <!--Button-->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/Generate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/sf_ns_bold"
-            android:backgroundTint="@color/black"
-            android:text="Create QR Code"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            />
-
-
         <ImageView
             android:id="@+id/imageIV"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/sms_qr" />
-
-
-        <!--Button-->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/downloadBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/sf_ns_bold"
-            android:backgroundTint="@color/black"
-            android:text="Download Now"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:textStyle="bold|italic" />
 
     </LinearLayout>
 

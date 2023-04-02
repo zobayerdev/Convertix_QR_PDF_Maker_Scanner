@@ -1,8 +1,6 @@
 package com.trodev.convertix.fragments;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,9 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.trodev.convertix.activities.LocationActivity;
 import com.trodev.convertix.R;
 import com.trodev.convertix.activities.BarCodeGenerator;
 import com.trodev.convertix.activities.ContactActivity;
+import com.trodev.convertix.activities.EmailActivity;
 import com.trodev.convertix.activities.MessageActivity;
 import com.trodev.convertix.activities.ProductQRActivity;
 import com.trodev.convertix.activities.ScanGalleryActivity;
@@ -28,7 +28,7 @@ import com.trodev.convertix.activities.URLActivity;
 import com.trodev.convertix.activities.WifiQRActivity;
 
 public class HomeFragment extends Fragment {
-    private CardView contact, product_qr, weburl, message, barcode, scanqrbar, scangallery, wifi;
+    private CardView contact, product_qr, weburl, message, barcode, emailQr, locationQr, wifi;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,6 +44,8 @@ public class HomeFragment extends Fragment {
         barcode = view.findViewById(R.id.barcode);
         // scanqrbar = view.findViewById(R.id.scanqrbar);
         // scangallery = view.findViewById(R.id.scangallery);
+        emailQr = view.findViewById(R.id.emailQr);
+        locationQr = view.findViewById(R.id.locationQr);
         wifi = view.findViewById(R.id.wifi);
 
         wifi.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +96,21 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        emailQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), EmailActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        locationQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), LocationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
 
@@ -110,7 +127,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
 
-        inflater.inflate(R.menu.menu_scan, menu);
+        inflater.inflate(R.menu.menu_home, menu);
         super.onCreateOptionsMenu(menu, inflater);
 
     }

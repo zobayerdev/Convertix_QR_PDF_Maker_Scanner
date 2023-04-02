@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/white"
         android:scrollbars="none">
 
@@ -26,8 +26,19 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:src="@drawable/qr_gallery" />
+                android:src="@drawable/qr_code" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_ns_bold"
+                android:gravity="center"
+                android:text="Find your QR Maker"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--First layout on this activity-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sf_ns_bold"
                         android:gravity="center"
-                        android:text="Create Product QR"
+                        android:text="Product QR"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         android:textSize="13sp" />
@@ -118,7 +129,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sf_ns_bold"
                             android:gravity="center"
-                            android:text="Create SMS QR"
+                            android:text="SMS QR"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
@@ -167,7 +178,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sf_ns_bold"
                             android:gravity="center"
-                            android:text="Create wifi \nCode"
+                            android:text="wifi QR"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
@@ -221,7 +232,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sf_ns_bold"
                         android:gravity="center"
-                        android:text="Create URL QR"
+                        android:text="URL QR"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         android:textSize="13sp" />
@@ -268,7 +279,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sf_ns_bold"
                             android:gravity="center"
-                            android:text="Create Contact QR"
+                            android:text="Contact QR"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
@@ -317,7 +328,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sf_ns_bold"
                             android:gravity="center"
-                            android:text="Create Bar Code"
+                            android:text="Bar Code"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
@@ -325,6 +336,157 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Second layout on this activity-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/emailQr"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="#FFFFFF"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/email" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_ns_bold"
+                        android:gravity="center"
+                        android:text="E-mail QR"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/locationQr"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#FFFFFF"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/location_qr" />
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_ns_bold"
+                            android:gravity="center"
+                            android:text="Location QR"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--add any activity-->
+                <!--<LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/barcode"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#FFFFFF"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/barcode_qr" />
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_ns_bold"
+                            android:gravity="center"
+                            android:text="Create Bar Code"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
 
             </LinearLayout>
 

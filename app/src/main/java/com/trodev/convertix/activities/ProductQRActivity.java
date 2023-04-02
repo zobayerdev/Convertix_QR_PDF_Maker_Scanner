@@ -9,6 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,7 +26,7 @@ public class ProductQRActivity extends AppCompatActivity {
 
     public final static int QRCodeWidth = 500;
     Bitmap bitmap;
-    private Button  download, Generate;
+    private ImageButton download, Generate;
     private EditText makeET, expireET, productET, companyET;
     private ImageView imageView;
 

@@ -9,21 +9,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="@color/purple_700"
-                app:cardCornerRadius="8dp"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="30dp"
                 app:cardElevation="3dp">
 
                 <LinearLayout
@@ -36,19 +34,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/kalpurush"
-                        android:text="ডেভেলপমেন্টে যারা রয়েছেন"
+                        android:fontFamily="@font/trebuc"
+                        android:text="Convertix"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/black"
+                        android:textSize="23sp" />
 
 
                     <pl.droidsonroids.gif.GifImageView
                         android:layout_width="150dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_person" />
+                        android:src="@drawable/qr_code" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -57,7 +54,7 @@
                         android:layout_margin="10dp"
                         android:fontFamily="@font/trebuc"
                         android:text="This app is developed by Trodev."
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -67,31 +64,20 @@
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:fontFamily="@font/trebuc"
-                        android:text="Head Developer:\n           Md. Zobayer Hasan Nayem \n           Software Engineer of Trodev \n"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:text="👩‍💻 Head Developer:\n              Md. Zobayer Hasan Nayem \n              Software Engineer of Trodev \n"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/trebuc"
-                        android:text="Sub Developer:\n           Pias Miah \n           Software Developer of Trodev \n"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="যোগাযোগ করতে নিম্মক্ত লিঙ্কে click করুন"
+                        android:text="👉  If you facing any problem using this apps,\nPlease contact with us"
                         android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
 
@@ -101,12 +87,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
-                        android:autoLink="email"
                         android:fontFamily="@font/trebuc"
                         android:gravity="left"
-                        android:text="zobayer.dev@gmail.com"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textIsSelectable="true"
+                        android:text="📧 zobayer.dev@gmail.com"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -116,12 +102,12 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="10dp"
-                        android:autoLink="phone"
                         android:fontFamily="@font/trebuc"
+                        android:textIsSelectable="true"
                         android:gravity="left"
-                        android:text="+8801615257555\n+8801638752371"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:text="📱 +8801615257555\n     +8801638752371"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -130,9 +116,9 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/trebuc"
-                        android:text="copyright 2022 all reserved by Trodev."
+                        android:text="© copyright 2022 all reserved by Trodev."
                         android:textAlignment="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 

@@ -227,7 +227,7 @@ public class pdfListFragment extends Fragment {
         File file = modelPdf.getFile();
 
         //generate uri
-        Uri uri = FileProvider.getUriForFile(mContext, "com.trodev.tunascanner.fileprovider", file);
+        Uri uri = FileProvider.getUriForFile(mContext, "com.trodev.convertix.fileprovider", file);
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("application/pdf");
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);

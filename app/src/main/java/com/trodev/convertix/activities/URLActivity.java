@@ -7,6 +7,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -23,7 +24,7 @@ public class URLActivity extends AppCompatActivity {
 
     public final static int QRCodeWidth = 500;
     Bitmap bitmap;
-    private Button download, Generate;
+    private ImageButton download, Generate;
     private EditText websiteET, urlET;
     private ImageView imageView;
 
@@ -38,7 +39,6 @@ public class URLActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
         websiteET = findViewById(R.id.websiteET);
         urlET = findViewById(R.id.urlET);
 
@@ -50,10 +50,9 @@ public class URLActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if ( websiteET.getText().toString().length() + urlET.getText().toString().length() == 0) {
+                if (websiteET.getText().toString().length() + urlET.getText().toString().length() == 0) {
                     Toast.makeText(URLActivity.this, "Make sure your given Text..!", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     try {
                         bitmap = textToImageEncode("Website Name:  " + websiteET.getText().toString().trim() + "\nWebsite URL:  " + urlET.getText().toString().trim());   // + "\n\n\nMake by Altai Platforms"
                         imageView.setImageBitmap(bitmap);

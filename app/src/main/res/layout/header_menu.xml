@@ -2,15 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="215dp">
+    android:layout_height="150dp">
 
    <ImageView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/qr_gallery"
+        android:src="@drawable/qr_code"
         android:contentDescription="@string/app_name"
        android:layout_gravity="center"
-       android:layout_margin="15dp"
+       android:layout_marginTop="5dp"
        />
 
 </LinearLayout>

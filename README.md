@@ -12,7 +12,7 @@ Every user has use these features.
   - E-mail QR
   - Profile QR
 
-- Bar Code Scanner
+- Bar Code Generator
   - Product Bar Code
   - International Article Number (EAN)
   - Code 128

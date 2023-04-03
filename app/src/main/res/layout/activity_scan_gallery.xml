@@ -14,35 +14,36 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Barcode &amp; QR Code Scanner"
+            android:text="Barcode &amp; QR Code Scan From Gallery "
             android:textAlignment="center"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_marginEnd="15dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <!--            <com.google.android.material.button.MaterialButton
-                            android:id="@+id/cameraBtn"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/trebuc"
-                            android:text="Camera"
-                            android:textAllCaps="false" />-->
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/galleryBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/trebuc"
-                android:text="Gallery"
-                android:textAllCaps="false" />
+            <!--Button-->
+            <ImageButton
+                android:id="@+id/scanBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/round_button"
+                android:src="@drawable/ic_scan_white" />
+            <!--Button-->
+            <ImageButton
+                android:id="@+id/gallery"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/round_button"
+                android:src="@drawable/ic_gallery_white" />
 
         </LinearLayout>
 
@@ -54,27 +55,16 @@
             android:adjustViewBounds="true"
             android:src="@drawable/qr_code" />
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/scanBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/trebuc"
-            android:text="Scan now"
-            android:textAllCaps="false" />
-
         <TextView
             style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="@font/sf_ns_bold"
+            android:fontFamily="@font/trebuc"
+            android:gravity="center"
             android:text="Scanning result show here:"
             android:textSize="18sp"
-            android:gravity="center"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/resultTv"
@@ -86,36 +76,33 @@
             android:text="Result"
             android:textColor="@color/black" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/copyBtn"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_copy"
-            android:background="@color/zxing_transparent"
-            />
+            <ImageButton
+                android:id="@+id/copyBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_copy" />
 
-        <ImageButton
-            android:id="@+id/shareBtn"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_share"
-            android:background="@color/zxing_transparent"
-            />
+            <ImageButton
+                android:id="@+id/shareBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_share" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-    </LinearLayout>
-
-
-
-
 
 </ScrollView>

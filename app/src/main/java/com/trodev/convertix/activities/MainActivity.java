@@ -176,8 +176,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.nav_pdf:
-                Toast.makeText(this, "Text to Pdf", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, TextToPdfActivity.class));
+                Toast.makeText(this, "Text to Pdf\nComing Soon", Toast.LENGTH_SHORT).show();
+                // startActivity(new Intent(MainActivity.this, TextToPdfActivity.class));
                 break;
             case R.id.nav_translator:
                 Toast.makeText(this, "Language Translator", Toast.LENGTH_SHORT).show();

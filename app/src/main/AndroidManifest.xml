@@ -18,6 +18,7 @@
         android:icon="@drawable/qr_code"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Convertix"
         tools:targetApi="31">
         <activity
@@ -31,7 +32,8 @@
             android:exported="false" />
         <activity
             android:name=".activities.TextToPdfActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".activities.MainActivity" />
         <activity
             android:name=".activities.LocationActivity"
             android:exported="false"

@@ -55,7 +55,7 @@ public class ScanGalleryActivity extends AppCompatActivity {
 
     private Uri imageUri = null;
 
-    private MaterialButton cameraBtn, galleryBtn, scanBtn;
+    private ImageButton galleryBtn, scanBtn;
     private ImageView imageIv;
     private TextView resultTv;
 
@@ -71,13 +71,13 @@ public class ScanGalleryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scan_gallery);
 
         // set title in activity
-        getSupportActionBar().setTitle("Scan From Storage");
+        getSupportActionBar().setTitle("Scan From Gallery & Storage");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         cameraPermission = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-        // bar code scanning option you can scan all type and formated qr codes
+        // bar code scanning option you can scan all type and formatted qr codes
         //bar code code all
         barcodeScannerOptions = new BarcodeScannerOptions.Builder()
                 .setBarcodeFormats(Barcode.FORMAT_ALL_FORMATS)
@@ -86,26 +86,14 @@ public class ScanGalleryActivity extends AppCompatActivity {
         barcodeScanner = BarcodeScanning.getClient(barcodeScannerOptions);
 
 
-      //  cameraBtn = findViewById(R.id.cameraBtn);
-        galleryBtn = findViewById(R.id.galleryBtn);
+        //  cameraBtn = findViewById(R.id.cameraBtn);
+        galleryBtn = findViewById(R.id.gallery);
         scanBtn = findViewById(R.id.scanBtn);
         imageIv = findViewById(R.id.imageiv);
         resultTv = findViewById(R.id.resultTv);
         copyBtn = findViewById(R.id.copyBtn);
         sharebtn = findViewById(R.id.shareBtn);
 
-/*        cameraBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (checkCameraPermission()) {
-                    pickImageCamera();
-                } else {
-                    requestCameraPermission();
-                }
-
-            }
-        });*/
 
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,11 +114,9 @@ public class ScanGalleryActivity extends AppCompatActivity {
         scanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(imageUri == null)
-                {
+                if (imageUri == null) {
                     Toast.makeText(ScanGalleryActivity.this, "Pick image first", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     detectResultFromImage();
                 }
             }
@@ -140,7 +126,7 @@ public class ScanGalleryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(ScanGalleryActivity.this.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("TextView",resultTv.getText().toString());
+                ClipData clip = ClipData.newPlainText("TextView", resultTv.getText().toString());
                 clipboard.setPrimaryClip(clip);
                 Toast.makeText(ScanGalleryActivity.this, "Copy successful", Toast.LENGTH_SHORT).show();
             }
@@ -174,22 +160,19 @@ public class ScanGalleryActivity extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(ScanGalleryActivity.this, "Failed Detect Image due to "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ScanGalleryActivity.this, "Failed Detect Image due to " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
-            }
-            catch(Exception e)
-            {
-                Log.d(TAG, "detectResultFromImage: ");
-                Toast.makeText(this, "Failed Detect Image "+e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
+        } catch (Exception e) {
+            Log.d(TAG, "detectResultFromImage: ");
+            Toast.makeText(this, "Failed Detect Image " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
     }
 
     private void extraBarCodeQRCodeInfo(List<Barcode> barcodes) {
 
-        for (Barcode barcode : barcodes)
-        {
+        for (Barcode barcode : barcodes) {
             Rect bounds = barcode.getBoundingBox();
             Point[] corners = barcode.getCornerPoints();
 
@@ -197,46 +180,45 @@ public class ScanGalleryActivity extends AppCompatActivity {
             Log.d(TAG, "extraBarCodeQRCodeInfo: rawValue");
 
             int valueType = barcode.getValueType();
-            switch (valueType)
-            {
-                case Barcode.TYPE_WIFI:{
+            switch (valueType) {
+                case Barcode.TYPE_WIFI: {
 
                     Barcode.WiFi typeWifi = barcode.getWifi();
-                    String ssid = ""+typeWifi.getSsid();
-                    String password = ""+ typeWifi.getPassword();
-                    String encryptionType = ""+typeWifi.getEncryptionType();
+                    String ssid = "" + typeWifi.getSsid();
+                    String password = "" + typeWifi.getPassword();
+                    String encryptionType = "" + typeWifi.getEncryptionType();
 
-                    Log.d(TAG, "extraBarCodeQRCodeInfo: ssid: "+ssid);
-                    Log.d(TAG, "extraBarCodeQRCodeInfo: password: "+password);
-                    Log.d(TAG, "extraBarCodeQRCodeInfo: encryptionType: "+encryptionType);
+                    Log.d(TAG, "extraBarCodeQRCodeInfo: ssid: " + ssid);
+                    Log.d(TAG, "extraBarCodeQRCodeInfo: password: " + password);
+                    Log.d(TAG, "extraBarCodeQRCodeInfo: encryptionType: " + encryptionType);
 
                     resultTv.setVisibility(View.VISIBLE);
                     copyBtn.setVisibility(View.VISIBLE);
                     sharebtn.setVisibility(View.VISIBLE);
-                    resultTv.setText("TYPE: TYPE_WIFI \nssid:  "+ ssid + "\npassword: "+password + "\nencryptionType: "+encryptionType + "\nraw value: "+rawValue);
+                    //   resultTv.setText("TYPE: TYPE_WIFI \nssid:  "+ ssid + "\npassword: "+password + "\nencryptionType: "+encryptionType + "\nraw value: "+rawValue);
                 }
                 break;
-                case Barcode.TYPE_URL:{
+                case Barcode.TYPE_URL: {
                     Barcode.UrlBookmark typeUrl = barcode.getUrl();
 
-                    String title = ""+typeUrl.getTitle();
-                    String url = " "+typeUrl.getUrl();
+                    String title = "" + typeUrl.getTitle();
+                    String url = " " + typeUrl.getUrl();
 
-                    Log.d(TAG, "extraBarCodeQRCodeInfo: title: "+title);
-                    Log.d(TAG, "extraBarCodeQRCodeInfo: url: "+url);
+                    Log.d(TAG, "extraBarCodeQRCodeInfo: title: " + title);
+                    Log.d(TAG, "extraBarCodeQRCodeInfo: url: " + url);
 
                     resultTv.setVisibility(View.VISIBLE);
                     copyBtn.setVisibility(View.VISIBLE);
                     sharebtn.setVisibility(View.VISIBLE);
-                    resultTv.setText("TYPE: TYPE_URL \nTitle: "+title + "\nUrl: "+url + "\nraw value: "+rawValue );
+                    //  resultTv.setText("TYPE: TYPE_URL \nTitle: "+title + "\nUrl: "+url + "\nraw value: "+rawValue );
 
                 }
                 break;
-                default:{
+                default: {
                     resultTv.setVisibility(View.VISIBLE);
                     copyBtn.setVisibility(View.VISIBLE);
                     sharebtn.setVisibility(View.VISIBLE);
-                    resultTv.setText("raw value: \n"+rawValue);
+                    resultTv.setText("Result: \n" + rawValue);
                 }
             }
 
@@ -265,10 +247,7 @@ public class ScanGalleryActivity extends AppCompatActivity {
 
                 Log.d(TAG, "onActivityResult: Picked image gallery: " + imageUri);
 
-            }
-
-            else
-            {
+            } else {
                 Toast.makeText(ScanGalleryActivity.this, "Cancelled", Toast.LENGTH_SHORT).show();
             }
         }

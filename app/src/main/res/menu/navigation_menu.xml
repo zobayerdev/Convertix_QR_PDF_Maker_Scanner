@@ -2,11 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_pdf"
-        android:icon="@drawable/ic_nav_pdf"
-        android:title="Text to PDF" />
-
-    <item
         android:id="@+id/nav_translator"
         android:icon="@drawable/nav_translator"
         android:title="Language Translator" />
@@ -15,6 +10,11 @@
         android:id="@+id/nav_speech"
         android:icon="@drawable/speech"
         android:title="Text To Speech" />
+
+    <item
+        android:id="@+id/nav_pdf"
+        android:icon="@drawable/ic_nav_pdf"
+        android:title="Text to PDF" />
 
     <item
         android:id="@+id/nav_visiting_card"

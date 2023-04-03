@@ -51,6 +51,12 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.15.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.0'
 
+    // pdf creator library
+    implementation 'com.itextpdf:itextpdf:5.5.13'
+
+    //translator
+    implementation 'com.google.mlkit:translate:17.0.1'
+
     //ml library dependancy
     implementation 'com.google.mlkit:barcode-scanning:17.1.0'
 

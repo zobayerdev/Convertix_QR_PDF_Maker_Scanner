@@ -11,10 +11,10 @@
         android:icon="@drawable/speech"
         android:title="Text To Speech" />
 
-    <item
+<!--    <item
         android:id="@+id/nav_pdf"
         android:icon="@drawable/ic_nav_pdf"
-        android:title="Text to PDF" />
+        android:title="Text to PDF" />-->
 
     <item
         android:id="@+id/nav_visiting_card"

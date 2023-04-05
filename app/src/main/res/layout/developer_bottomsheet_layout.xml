@@ -6,7 +6,6 @@
     android:background="@drawable/dialog_background"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -64,10 +63,9 @@
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:fontFamily="@font/trebuc"
-                        android:text="👩‍💻 Head Developer:\n              Md. Zobayer Hasan Nayem \n              Software Engineer of Trodev \n"
+                        android:text="👩‍💻Developer:\n              Md. Zobayer Hasan Nayem \n              Software Engineer of Trodev \n"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
-
 
                     <TextView
                         android:layout_width="match_parent"
@@ -89,9 +87,9 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/trebuc"
                         android:gravity="left"
-                        android:textIsSelectable="true"
                         android:text="📧 zobayer.dev@gmail.com"
                         android:textColor="@color/black"
+                        android:textIsSelectable="true"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -103,10 +101,10 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/trebuc"
-                        android:textIsSelectable="true"
                         android:gravity="left"
                         android:text="📱 +8801615257555\n     +8801638752371"
                         android:textColor="@color/black"
+                        android:textIsSelectable="true"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 

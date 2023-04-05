@@ -54,6 +54,10 @@ public class TranslatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translator);
 
+        // set title in activity
+        getSupportActionBar().setTitle("Language Translator");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         // all button are here
         sourceLanguageET = findViewById(R.id.sourceLanguageET);
         resultTv = findViewById(R.id.resultTv);
@@ -62,7 +66,7 @@ public class TranslatorActivity extends AppCompatActivity {
         translateBtn = findViewById(R.id.translateBtn);
 
         progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Please wait");
+        progressDialog.setTitle("Please wait,\nDownload Language Model");
         progressDialog.setCanceledOnTouchOutside(false);
 
         loadAvailableLanguage();

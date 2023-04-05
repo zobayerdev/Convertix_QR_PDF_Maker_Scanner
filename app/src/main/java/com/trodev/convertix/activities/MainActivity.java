@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.trodev.convertix.PrivacyPolicyActivity;
 import com.trodev.convertix.R;
 import com.trodev.convertix.fragments.HomeFragment;
 import com.trodev.convertix.fragments.ImageListFragment;
@@ -175,17 +176,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
         switch (item.getItemId()) {
-            case R.id.nav_pdf:
+/*            case R.id.nav_pdf:
                 Toast.makeText(this, "Text to Pdf\nComing Soon", Toast.LENGTH_SHORT).show();
                 // startActivity(new Intent(MainActivity.this, TextToPdfActivity.class));
-                break;
+                break;*/
             case R.id.nav_translator:
                 Toast.makeText(this, "Language Translator", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, TranslatorActivity.class));
+                Toast.makeText(this, "Please download all language model", Toast.LENGTH_LONG).show();
                 break;
             case R.id.nav_speech:
                 Toast.makeText(this, "Text to Speech", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, TextToSpeechActivity.class));
+                startActivity(new Intent(MainActivity.this, SpeechActivity.class));
                 break;
             case R.id.nav_visiting_card:
                 Toast.makeText(this, "Make Responsive Visiting Card", Toast.LENGTH_SHORT).show();
@@ -205,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Developer", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_policy:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.app-privacy-policy.com/live.php?token=qB3iS10fUJmr6yEFtaVo9yve0uuPP3Ok")));
+                startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
                 Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_share:

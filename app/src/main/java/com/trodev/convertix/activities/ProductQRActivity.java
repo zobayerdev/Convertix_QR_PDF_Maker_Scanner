@@ -1,5 +1,7 @@
 package com.trodev.convertix.activities;
 
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,6 +25,8 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.trodev.convertix.R;
 
+import java.util.Calendar;
+
 public class ProductQRActivity extends AppCompatActivity {
 
     public final static int QRCodeWidth = 500;
@@ -29,7 +34,13 @@ public class ProductQRActivity extends AppCompatActivity {
     private ImageButton download, Generate;
     private EditText makeET, expireET, productET, companyET;
     private ImageView imageView;
+    private ImageButton dateBtn, expireDateBtn;
 
+    //define calender & datepicker
+    Calendar c;
+    DatePickerDialog dpd;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +60,50 @@ public class ProductQRActivity extends AppCompatActivity {
         download.setVisibility(View.INVISIBLE);
         imageView = findViewById(R.id.imageIV);
         Generate = findViewById(R.id.Generate);
+        dateBtn = findViewById(R.id.dateBtn);
+        expireDateBtn = findViewById(R.id. expireDateBtn);
+
+
+        dateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                c = Calendar.getInstance();
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                int month = c.get(Calendar.MONTH);
+                int year = c.get(Calendar.YEAR);
+
+                dpd = new DatePickerDialog(ProductQRActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
+                        makeET.setText(mDay + "/" + (mMonth + 1) + "/" + mYear);
+                    }
+                }, day, month, year);
+
+                dpd.show();
+
+            }
+        });
+
+        expireDateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                c = Calendar.getInstance();
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                int month = c.get(Calendar.MONTH);
+                int year = c.get(Calendar.YEAR);
+
+                dpd = new DatePickerDialog(ProductQRActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
+                        expireET.setText(mDay + "/" + (mMonth + 1) + "/" + mYear);
+                    }
+                }, day, month, year);
+
+                dpd.show();
+
+            }
+        });
+
 
         Generate.setOnClickListener(new View.OnClickListener() {
             @Override

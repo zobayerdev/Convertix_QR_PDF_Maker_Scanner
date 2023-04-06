@@ -190,8 +190,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, SpeechActivity.class));
                 break;
             case R.id.nav_visiting_card:
-                Toast.makeText(this, "Make Responsive Visiting Card", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "Make Responsive Visiting Card", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
+
+                final Dialog dialog1 = new Dialog(this);
+                dialog1.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog1.setContentView(R.layout.update_bottomsheet_layout);
+
+                dialog1.show();
+                dialog1.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                dialog1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog1.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+                dialog1.getWindow().setGravity(Gravity.BOTTOM);
+                Toast.makeText(this, "Update Notice", Toast.LENGTH_SHORT).show();
+
                 // startActivity(new Intent(MainActivity.this, TextToSpeechActivity.class));
                 break;
             case R.id.nav_dev:

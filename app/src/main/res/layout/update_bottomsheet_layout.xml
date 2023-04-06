@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="@color/purple_700"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="3dp">
 
@@ -36,9 +36,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/ubuntu_bold"
-                        android:text="নোটিশ"
+                        android:text="Update Notice"
                         android:textAlignment="center"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
@@ -49,8 +49,8 @@
                         android:layout_gravity="right"
                         android:layout_margin="10dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="My Organization অ্যাপটির মান উন্নয়নের জন্য কাজ চলছে। আমাদের ডেভেলপাররা সর্বাত্মক চেষ্টা চালিয়ে যাচ্ছে এই অ্যাপটির ফিচারস নিয়ে। শীগ্রহী আমাদের টিম অ্যাপটির নতুন ভার্সন নিয়ে আসবে আপনাদের কাছে।\n\nধন্যবাদ আমাদের পাশে থাকুন"
-                        android:textColor="@color/white"
+                        android:text="Convertix অ্যাপটির মান উন্নয়নের জন্য কাজ চলছে। আমাদের ডেভেলপাররা সর্বাত্মক চেষ্টা চালিয়ে যাচ্ছে এই অ্যাপটির ফিচারস নিয়ে। শীগ্রহী আমাদের টিম অ্যাপটির নতুন ভার্সন নিয়ে আসবে আপনাদের কাছে।\n\nধন্যবাদ আমাদের পাশে থাকুন"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="@color/purple_700"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="3dp">
 
@@ -101,8 +101,8 @@
                             android:layout_marginTop="5dp"
                             android:fontFamily="@font/ubuntu_bold"
                             android:gravity="center"
-                            android:text="যোগাযোগ"
-                            android:textColor="@color/purple_200"
+                            android:text="Contact"
+                            android:textColor="@color/black"
                             android:textSize="30sp"
                             android:textStyle="bold" />
 
@@ -111,7 +111,7 @@
                             android:layout_height="35dp"
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
-                            android:src="@drawable/ic_person" />
+                            android:src="@drawable/qr_code" />
 
                     </LinearLayout>
 
@@ -123,7 +123,7 @@
                         android:layout_margin="10dp"
                         android:fontFamily="@font/kalpurush"
                         android:text="যেকোনো প্রশ্ন/সহায়তা বার্তার জন্য আমাদের ফেসবুক পেজে message করুন অথবা আমাদের E-mail বা Phone এর মাধ্যমে জানান"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -131,10 +131,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:fontFamily="@font/ubuntu_bold"
+                        android:fontFamily="@font/kalpurush"
                         android:text="যোগাযোগ করতে নিম্মক্ত লিঙ্কে click করুন"
                         android:textAlignment="center"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -145,8 +145,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:autoLink="web"
-                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/ubuntu_bold"
                         android:gravity="left"
                         android:text="https://www.facebook.com/trodevit/"
@@ -159,11 +158,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:autoLink="email"
                         android:fontFamily="@font/ubuntu_bold"
                         android:gravity="left"
-                        android:text="zobayer.dev@gmail.com"
-                        android:textColor="@color/purple_200"
+                        android:text="📧: zobayer.dev@gmail.com"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -174,14 +172,12 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="10dp"
-                        android:autoLink="phone"
                         android:fontFamily="@font/ubuntu_bold"
                         android:gravity="left"
-                        android:text="+8801615257555"
-                        android:textColor="@color/purple_200"
+                        android:text="📞: +8801615257555"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
 
                 </LinearLayout>
 

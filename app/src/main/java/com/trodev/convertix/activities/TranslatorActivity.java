@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -47,6 +50,8 @@ public class TranslatorActivity extends AppCompatActivity {
     private String destintaionLanguageCode = "bn";
     private String destintaionLanguageTitle = "Bangla";
 
+    private ImageButton shareBtn, copyBtn;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -64,6 +69,13 @@ public class TranslatorActivity extends AppCompatActivity {
         sourceLanguageChooseBtn = findViewById(R.id.sourceLanguageChooseBtn);
         destinationLanguageChooseBtn = findViewById(R.id.destinationLanguageChooseBtn);
         translateBtn = findViewById(R.id.translateBtn);
+
+        shareBtn = findViewById(R.id.shareBtn);
+        copyBtn = findViewById(R.id.copyBtn);
+
+        // set visibility button
+        shareBtn.setVisibility(View.INVISIBLE);
+        copyBtn.setVisibility(View.INVISIBLE);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Please wait,\nDownload Language Model");
@@ -131,7 +143,31 @@ public class TranslatorActivity extends AppCompatActivity {
                     public void onSuccess(String s) {
                         Log.d(TAG, "onSuccess: " + s);
                         resultTv.setText(s);
+                        copyBtn.setVisibility(View.VISIBLE);
+                        shareBtn.setVisibility(View.VISIBLE);
                         progressDialog.dismiss();
+
+                        copyBtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                ClipboardManager clipboard = (ClipboardManager) getSystemService(TranslatorActivity.this.CLIPBOARD_SERVICE);
+                                ClipData clip = ClipData.newPlainText("TextView", resultTv.getText().toString());
+                                clipboard.setPrimaryClip(clip);
+                                Toast.makeText(TranslatorActivity.this, "Copy successful", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        shareBtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String s = resultTv.getText().toString();
+                                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                                sharingIntent.setType("text/plain");
+                                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here");
+                                sharingIntent.putExtra(Intent.EXTRA_TEXT, s);
+                                startActivity(Intent.createChooser(sharingIntent, "Share text via"));
+                                Toast.makeText(TranslatorActivity.this, "Share Translating Text", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

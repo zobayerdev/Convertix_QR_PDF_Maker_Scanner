@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/images_item_scan"
+        android:icon="@drawable/file_scan"
+        android:title="Scan from image"
+        app:showAsAction="always" />
+
+<!--    <item
+        android:id="@+id/gallery_item_scan"
+        android:icon="@drawable/gallery_nav"
+        android:title="Scan from gallery"
+        app:showAsAction="always" />-->
+
+</menu>

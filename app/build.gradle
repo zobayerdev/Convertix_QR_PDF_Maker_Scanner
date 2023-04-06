@@ -57,7 +57,10 @@ dependencies {
     //translator
     implementation 'com.google.mlkit:translate:17.0.1'
 
-    //ml library dependancy
+    // mlkit dependency
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.2'
+
+    //ml library dependency
     implementation 'com.google.mlkit:barcode-scanning:17.1.0'
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
